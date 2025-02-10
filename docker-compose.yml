@@ -1,7 +1,7 @@
 services:
   db:
     build:
-    #context は、Docker イメージをビルドする際の現在の作業ディレクトリ（コンテキスト）を指定します。
+    #context は、Docker イメージをビルドする際の、「ホスト」の現在の作業ディレクトリ（コンテキスト）を指定します。
       context: .
       dockerfile: docker/db/Dockerfile
     ports:
