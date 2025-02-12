@@ -16,8 +16,10 @@ docker-compose build
 docker-compose up -d
 
 # データベースに接続する（パスワードは pass を入力）
+# -c 引数として渡されたコマンドを実行するオプション
 docker-compose exec db mysql -u test_user -D test_database -p
 docker-compose exec db bash -c 'mysql -u${MYSQL_USER} -p${MYSQL_PASSWORD} ${MYSQL_DATABASE}'
+
 
 # Docker コンテナの停止・削除
 docker-compose down
